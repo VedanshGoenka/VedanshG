@@ -163,6 +163,11 @@
   $(document).ready(function () {
     $(".venobox").venobox({
       share: ["facebook", "twitter", "linkedin", "pinterest", "download"],
+      spinner: "wave",
+      spinColor: "#18d26e",
+      overlayColor: "rgba(0, 0, 0, 0.6)",
+      numeratio: true,
+      autoplay: true,
     });
   });
 
