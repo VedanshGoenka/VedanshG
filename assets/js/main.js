@@ -19,3 +19,7 @@ function showMoreLess() {
     moreText.style.display = "inline";
   }
 }
+
+$(function () {
+  $("#Astrophotography2020").load("Astrophotography2020.html");
+});
