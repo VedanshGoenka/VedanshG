@@ -658,9 +658,20 @@ li {
   padding-bottom: 0;
 }
 
-/* This is a hack; venobox doesn't support auto-width/auto-height. This literally takes the css attributes from bootstrap's class="row col-4 mx-auto" and applies it the generated venobox. I can't do this in HTML as the venobox is injected by the live server. */
 
-.vbox-content img {
+.vbox-content{
+  width: 100%;
+  height: 100%;
+}
+
+.vbox-content img{
+  max-width: 100%;
+  height: 100%;
+}
+
+/* This was a hack; venobox doesn't support auto-width/auto-height. This literally takes the css attributes from bootstrap's class="row col-4 mx-auto" and applies it the generated venobox. I can't do this in HTML as the venobox is injected by the live server. */
+
+/* .vbox-content img {
   margin-right: auto !important;
   margin-left: auto !important;
   flex: 0 0 auto;
@@ -670,7 +681,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
-}
+} */
 
 /* 
 Adds Bullet Points before each <h4>
