@@ -21,5 +21,5 @@ function showMoreLess() {
 }
 
 $(function () {
-  $("#Astrophotography2020").load("Astrophotography2020.html");
+  $("#astrophotography2020").load("astrophotography2020.html");
 });
