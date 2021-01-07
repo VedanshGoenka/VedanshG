@@ -1,9 +1,11 @@
+// Toggle Visibillty of Skills
 function toggle(visible) {
   document.querySelectorAll(visible).forEach((e) => {
     e.hidden = !e.hidden;
   });
 }
 
+// Read More/Less Toggle
 function showMoreLess() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
@@ -20,6 +22,10 @@ function showMoreLess() {
   }
 }
 
+// Reduces the size of index.html
 $(function () {
-  $("#astrophotography2020").load("astrophotography2020.html");
+  $("#hobbies-html").load("hobbies.html");
+  $("#aboutme-html").load("aboutme.html");
+  $("#astrophotography2020-article").load("astrophotography2020.html");
+  $("#contact-html").load("contact.html");
 });
