@@ -14,13 +14,10 @@ $(function () {
   $("#contact-html").load("contact.html");
 });
 
-
 // Read More/Less Toggles
-function showMoreLessAstro() {
-  var dots = document.getElementById("dots-astro2020");
-  var moreText = document.getElementById("more-astro2020");
-  var btnText = document.getElementById("clickButton-astro2020");
 
+//Creates the Read More/Less Button
+function buttonCompute(dots, moreText, btnText) {
   if (dots.style.display === "none") {
     dots.style.display = "inline";
     btnText.innerHTML = "Read More";
@@ -30,25 +27,26 @@ function showMoreLessAstro() {
     btnText.innerHTML = "Read Less";
     moreText.style.display = "inline";
   }
+}
+
+//Shortens syntax -- Me trying to reduce clutter. Hi MOM!
+function idName(id){
+  return document.getElementById(String(id));
+}
+
+//All Buttons...
+function showMoreLessAstro() {
+  buttonCompute(
+    idName("dots-astro2020"),
+    idName("more-astro2020"),
+    idName("clickButton-astro2020")
+  );
 }
 
 function showMoreLessFiber() {
-  var dots = document.getElementById("dots-fiber");
-  var moreText = document.getElementById("more-fiber");
-  var btnText = document.getElementById("clickButton-fiber");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read More";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read Less";
-    moreText.style.display = "inline";
-  }
+  buttonCompute(
+    idName("dots-fiber"),
+    idName("more-fiber"),
+    idName("clickButton-fiber")
+  );
 }
-
-
-
-
-
