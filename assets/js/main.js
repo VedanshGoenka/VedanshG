@@ -26,6 +26,6 @@ function showMoreLess() {
 $(function () {
   $("#hobbies-html").load("hobbies.html");
   $("#aboutme-html").load("aboutme.html");
-  $("#astrophotography2020-article").load("astrophoto2020.html");
+  $("#astrophotography2020-article").load("/assets/blog/astrophotography2020/astrophoto2020.html");
   $("#contact-html").load("contact.html");
 });
