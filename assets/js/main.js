@@ -9,8 +9,9 @@ function toggle(visible) {
 $(function () {
   $("#hobbies-html").load("hobbies.html");
   $("#aboutme-html").load("aboutme.html");
-  $("#astrophotography2020-article").load("/assets/blog/astrophotography2020/");
+  $("#astrophotography20-article").load("/assets/blog/astrophotography2020/");
   $("#fiberopticcable-article").load("/assets/blog/fiberopticinstall/");
+  $("#astrophotography19-article").load("/assets/blog/astrophotography2019/");
   $("#contact-html").load("contact.html");
 });
 
@@ -30,16 +31,16 @@ function buttonCompute(dots, moreText, btnText) {
 }
 
 //Shortens syntax -- Me trying to reduce clutter. Hi MOM!
-function idName(id){
+function idName(id) {
   return document.getElementById(String(id));
 }
 
 //All Buttons...
-function showMoreLessAstro() {
+function showMoreLessAstro20() {
   buttonCompute(
-    idName("dots-astro2020"),
-    idName("more-astro2020"),
-    idName("clickButton-astro2020")
+    idName("dots-astro20"),
+    idName("more-astro20"),
+    idName("clickButton-astro20")
   );
 }
 
@@ -48,5 +49,13 @@ function showMoreLessFiber() {
     idName("dots-fiber"),
     idName("more-fiber"),
     idName("clickButton-fiber")
+  );
+}
+
+function showMoreLessAstro19() {
+  buttonCompute(
+    idName("dots-astro19"),
+    idName("more-astro19"),
+    idName("clickButton-astro19")
   );
 }
