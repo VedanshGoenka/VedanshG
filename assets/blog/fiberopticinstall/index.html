@@ -13,53 +13,53 @@
       </p>
       <p>
         We were using a comcast subscription and had maxed out the speed quota,
-        100/10 (this means 100 mbps down and 10 mbps up). AT&T fiber
-        promises 1000/1000! That is 10x the download speed and 100x the upload
-        speed of what I previously had! <span id="dots-fiber"> ...</span>
+        100/10 (this means 100 mbps down and 10 mbps up). AT&T fiber promises
+        1000/1000! That is 10x the download speed and 100x the upload speed of
+        what I previously had! <span id="dots-fiber"> ...</span>
       </p>
       <span id="more-fiber">
         <p>
           There is a terminal right behind my mailbox, this terminal has all of
-          the fiber for the 4 houses served by the mailbox. A technician came and
-          ran 2 wires to an outlet in our house. One across the sidewalk and
+          the fiber for the 4 houses served by the mailbox. A technician came
+          and ran 2 wires to an outlet in our house. One across the sidewalk and
           parallel to the control box, then one connecting the first wire to the
-          outside control box. The problem that arose was that there was no power
-          to the control box outside, this meant that we either had to bring power
-          outside or we had to snake the cable upstairs to where there is power.
-          The better option is to bring the fiber up, but the contractor was
-          unwilling to do this. We ended up just closing shop and started
-          pondering solutions.
+          outside control box. The problem that arose was that there was no
+          power to the control box outside, this meant that we either had to
+          bring power outside or we had to snake the cable upstairs to where
+          there is power. The better option is to bring the fiber up, but the
+          contractor was unwilling to do this. We ended up just closing shop and
+          started pondering solutions.
         </p>
         <p>
           We looked into POE and other crude methods to bring power down. In a
-          vain attempt to check if there was a connection between the top area and
-          the outside control box, I used some old 3d printing filament and ran it
-          down, due to the flexible nature of the filament, it just coiled up and
-          nothing was discovered. We hoped that the next person would either
-          condone our macgyvered solution or be willing to try fishing the cable
-          through the wall.
+          vain attempt to check if there was a connection between the top area
+          and the outside control box, I used some old 3d printing filament and
+          ran it down, due to the flexible nature of the filament, it just
+          coiled up and nothing was discovered. We hoped that the next person
+          would either condone our macgyvered solution or be willing to try
+          fishing the cable through the wall.
         </p>
         <p>
           Luckily the next person that came was a kind filipino soul who was
-          really willing to try anything and had an air of confidence around him.
-          He seemed knowledgeable and was willing to try risks and unlike the
-          other person who came, he trusted my dad and I and was willing to try to
-          snake the cable through. This eventually worked and knowing that this
-          was possible was both a relief and mildly infuriating as we could have
-          had all of this figured out a few days ago.
+          really willing to try anything and had an air of confidence around
+          him. He seemed knowledgeable and was willing to try risks and unlike
+          the other person who came, he trusted my dad and I and was willing to
+          try to snake the cable through. This eventually worked and knowing
+          that this was possible was both a relief and mildly infuriating as we
+          could have had all of this figured out a few days ago.
         </p>
         <p>
           After snaking the cable up, the fiber optic cable was terminated and
-          turned into copper. The signal is then sent downstairs underneath the TV
-          to where the modem and router are, the signal is then split into 4
+          turned into copper. The signal is then sent downstairs underneath the
+          TV to where the modem and router are, the signal is then split into 4
           networks, the best way to describe them are the following:
         </p>
         <p>AT&T Router - Speeds of ~950/950 wired</p>
         <ol>
           <li>
-            <strong>"Unsecure Devices and Entertainment"</strong> - This was both wired
-            and wireless and is used by most devices at home (phones, laptops,
-            etc)
+            <strong>"Unsecure Devices and Entertainment"</strong> - This was
+            both wired and wireless and is used by most devices at home (phones,
+            laptops, etc)
           </li>
           <li><strong>"Guest"</strong> - The guest network, wireless only</li>
         </ol>
@@ -69,10 +69,10 @@
         </p>
         <ol>
           <li>
-            <strong>"Secure user devices"</strong> - This is basically the entire
-            house's ethernet and is used by laptops that are docked (mine
-            and my dad's) and other devices such as the Raspberry
-            Pi's. Both wired and wireless.
+            <strong>"Secure user devices"</strong> - This is basically the
+            entire house's ethernet and is used by laptops that are docked (mine
+            and my dad's) and other devices such as the Raspberry Pi's. Both
+            wired and wireless.
           </li>
           <li>
             <strong>"Secure devices"</strong> - Wifi devices that need to be
@@ -81,37 +81,36 @@
         </ol>
         <p>
           The Apple router signal is sent back upstairs into a network switch
-          which then supplies ethernet to the rest of the upstairs. This topology
-          took a while to figure out, but it seems to work quite well.
+          which then supplies ethernet to the rest of the upstairs. This
+          topology took a while to figure out, but it seems to work quite well.
         </p>
         <p>
-          The thing that baffles me the most is just how thin a fiber optic cable
-          really is. The shielding makes it seem impossibly thick, but in reality
-          it is so thin, you can barely see it. Here's a photo of it
+          The thing that baffles me the most is just how thin a fiber optic
+          cable really is. The shielding makes it seem impossibly thick, but in
+          reality it is so thin, you can barely see it. Here's a photo of it
           unshielded:
         </p>
         <p>
-          The fiber optic cable isn't the white thing, it's about ~9
-          pixels in size inside the white cable! My phone was barely able to
-          capture it! *This photo is from an offcut piece.
+          The fiber optic cable isn't the white thing, it's about ~9 pixels in
+          size inside the white cable! My phone was barely able to capture it!
+          *This photo is from an offcut piece.
         </p>
         <a href="#fiber-1">
           <img
             class="row col-8 col-sm-7 col-md-4 mx-auto"
-            src="/assets/blog/fiberopticinstall/fiberopticcable.jpg"
+            src="assets/blog/fiberopticinstall/fiberopticcable.jpg"
             alt="Fiber Optic Cable Image"
           />
         </a>
         <a href="#_" class="lb" id="fiber-1">
-          <img src="/assets/blog/fiberopticinstall/fiberopticcable.jpg" />
+          <img src="assets/blog/fiberopticinstall/fiberopticcable.jpg" />
         </a>
         <p>
           I thoroughly enjoyed this project because I learned a lot about fiber
           optic cables and how they are routed.
-          <a
-            href="https://www.youtube.com/watch?v=BHrBq1iuiI4"
-            target="_blank"
-            >Here is a really cool video that I watched and learned a lot from.</a
+          <a href="https://www.youtube.com/watch?v=BHrBq1iuiI4" target="_blank"
+            >Here is a really cool video that I watched and learned a lot
+            from.</a
           >
         </p>
       </span>
