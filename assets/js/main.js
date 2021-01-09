@@ -9,9 +9,9 @@ function toggle(visible) {
 $(function () {
   $("#hobbies-html").load("hobbies.html");
   $("#aboutme-html").load("aboutme.html");
-  $("#astrophotography20-article").load("/assets/blog/astrophotography2020/");
-  $("#fiberopticcable-article").load("/assets/blog/fiberopticinstall/");
-  $("#astrophotography19-article").load("/assets/blog/astrophotography2019/");
+  $("#astrophotography20-article").load("assets/blog/astrophotography2020/");
+  $("#fiberopticcable-article").load("assets/blog/fiberopticinstall/");
+  $("#astrophotography19-article").load("assets/blog/astrophotography2019/");
   $("#contact-html").load("contact.html");
 });
 
