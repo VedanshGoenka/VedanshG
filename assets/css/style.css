@@ -782,7 +782,8 @@ Adds Bullet Points before each <h4>
   font-size: 24px;
 }
 
-.projects .icon-box h4 a {
+.projects .icon-box h4 a,
+.projects .icon-box h4 button {
   color: var(--white);
 }
 
@@ -810,10 +811,21 @@ Adds Bullet Points before each <h4>
 }
 
 .projects .icon-box:hover h4 a,
+.projects .icon-box:hover h4 button,
 .projects .icon-box:hover p {
   color: var(--white);
 }
 
+h4 button {
+  all: inherit;
+  display: inline;
+}
+
+h2 button {
+  all: inherit;
+  display: inline;
+  margin: 0 0 0 0;
+}
 /*--------------------------------------------------------------
 # Photography
 --------------------------------------------------------------*/
