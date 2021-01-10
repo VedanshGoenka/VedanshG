@@ -699,7 +699,7 @@ li {
  * Hover.css (http://ianlunn.github.io/Hover/)
 */
 
-.blog .hvr-grow-shadow {
+.hvr-grow-shadow {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -710,7 +710,7 @@ li {
   -webkit-transition-property: box-shadow, transform;
   transition-property: box-shadow, transform;
 }
-.blog .hvr-grow-shadow:hover,
+.hvr-grow-shadow:hover,
 .hvr-grow-shadow:focus,
 .hvr-grow-shadow:active {
   box-shadow: 0 10px 10px -10px var(--color5);
@@ -737,6 +737,9 @@ Adds Bullet Points before each <h4>
 # Projects
 --------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+# Projects - IconBox
+--------------------------------------------------------------*/
 .projects .icon-box {
   text-align: center;
   background: var(--medium-transparency-grey);
@@ -748,7 +751,7 @@ Adds Bullet Points before each <h4>
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: var(--color5);
+  background: var(--color4);
   border-radius: 5px;
   transition: all 0.3s ease-out 0s;
   display: flex;
@@ -780,6 +783,7 @@ Adds Bullet Points before each <h4>
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
+  color: var(--white);
 }
 
 .projects .icon-box h4 a,
@@ -791,11 +795,12 @@ Adds Bullet Points before each <h4>
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  color: var(--light-grey);
 }
 
 .projects .icon-box:hover {
-  background: var(--color5);
-  border-color: var(--color5);
+  background: var(--color4);
+  border-color: var(--color4);
 }
 
 .projects .icon-box:hover .icon {
@@ -803,7 +808,7 @@ Adds Bullet Points before each <h4>
 }
 
 .projects .icon-box:hover .icon i {
-  color: var(--color5);
+  color: var(--color4);
 }
 
 .projects .icon-box:hover .icon::before {
@@ -817,15 +822,79 @@ Adds Bullet Points before each <h4>
 }
 
 h4 button {
-  all: inherit;
+  all: unset;
   display: inline;
 }
 
 h2 button {
-  all: inherit;
+  all: unset;
   display: inline;
   margin: 0 0 0 0;
 }
+
+button {
+  all: unset;
+}
+
+/*--------------------------------------------------------------
+# Projects - Content
+--------------------------------------------------------------*/
+
+.projects .projects-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--medium-transparency-white);
+  position: relative;
+}
+
+.projects .projects-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: var(--color5);
+  margin-bottom: 14px;
+}
+
+.projects .projects-item h5 {
+  font-size: 16px;
+  color: var(--white);
+  background: var(--medium-transparency-grey);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+.projects code {
+  all: unset;
+  font-family: var(--bs-font-monospace);
+  font-size: 0.875em;
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+.projects .projects-item p,
+ul,
+li {
+  color: var(--light-grey);
+}
+
+.projects .projects-item ul {
+  padding-left: 20px;
+}
+
+.projects .projects-item ul li {
+  padding-bottom: 10px;
+}
+
+.projects .projects-item:last-child {
+  padding-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 # Photography
 --------------------------------------------------------------*/
