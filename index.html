@@ -42,7 +42,7 @@
       <div class="container">
         <!-- Name and Logo -->
         <h1>
-          <a href="index.html">Vedansh Goenka</a>
+          <a href="index.html" class="hvr-grow-shadow">Vedansh Goenka</a>
           <!-- Todo: Create a logo -->
           <!-- <a href="index.html" ><img src="assets/img/placeholderlogo.png" alt="" class="img-fluid" width="100px"></a> -->
         </h1>
@@ -54,12 +54,12 @@
 
         <nav class="nav-menu d-none d-lg-block">
           <ul>
-            <li class="active"><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#photography">Photography</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active hvr-grow-shadow"><a href="#header">Home</a></li>
+            <li><a href="#about" class="hvr-grow-shadow">About</a></li>
+            <li><a href="#projects" class="hvr-grow-shadow">Projects</a></li>
+            <li><a href="#blog" class="hvr-grow-shadow">Blog</a></li>
+            <li><a href="#photography" class="hvr-grow-shadow">Photography</a></li>
+            <li><a href="#contact" class="hvr-grow-shadow">Contact</a></li>
           </ul>
         </nav>
         <!-- .nav-menu -->
@@ -69,28 +69,31 @@
           <a
             href="https://github.com/VedanshGoenka"
             target="_blank"
-            class="github"
+            class="github hvr-grow-shadow"
             ><i class="fab fa-github"></i
           ></a>
           <a
             href="https://www.instagram.com/vedanshgoenka/"
             target="_blank"
-            class="instagram"
+            class="instagram hvr-grow-shadow"
             ><i class="fab fa-instagram"></i
           ></a>
           <a
             href="https://open.spotify.com/user/technopenguinz"
             target="_blank"
-            class="spotify"
+            class="spotify hvr-grow-shadow"
             ><i class="fab fa-spotify"></i
           ></a>
           <a
             href="https://www.last.fm/user/techpenguinz"
             target="_blank"
-            class="lastfm"
+            class="lastfm hvr-grow-shadow"
             ><i class="fab fa-lastfm"></i
           ></a>
-          <a href="#" target="_blank" class="linkedin"
+          <a 
+            href="#"
+            target="_blank" 
+            class="linkedinhvr-grow-shadow"
             ><i class="fab fa-linkedin-in"></i
           ></a>
         </div>
@@ -112,20 +115,22 @@
             <divider></divider>
             <span showhide onclick="toggle('[showhide]'); return false;"
               ><i
-                class="fad fa-eye h4 align-text-top"
+                class="fad fa-eye h4 align-text-top hvr-grow-shadow"
                 style="
                   --fa-primary-color: var(--color1);
                   --fa-secondary-color: var(--white);
+                  cursor: pointer;
                 "
                 title="More Info"
               ></i
             ></span>
             <span showhide hidden onclick="toggle('[showhide]'); return false;"
               ><i
-                class="fad fa-eye-slash h4 align-text-top"
+                class="fad fa-eye-slash h4 align-text-top hvr-grow-shadow"
                 style="
                   --fa-primary-color: var(--color2);
                   --fa-secondary-color: var(--white);
+                  cursor: pointer;
                 "
               ></i
             ></span>
@@ -329,22 +334,34 @@
             <p>My Projects</p>
           </div>
           <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                <h4>
-                  <button onclick="showHide('myDIV','MPCNC')">Lorem Ipsum</button>
-                </h4>
-                <p>
-                  Voluptatum deleniti atque corrupti quos dolores et quas
-                  molestias excepturi
-                </p>
-              </div>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch hvr-grow-shadow">
+              <button onclick="showHide('myDIV','MPCNC')">
+                <div class="icon-box">
+                  <div class="icon">
+                    <i
+                      class="fad fa-tools"
+                      style="
+                        --fa-primary-color: midnightblue;
+                        --fa-secondary-color: black;
+                      "
+                    ></i>
+                  </div>
+                  <h4>MPCNC</h4>
+                  <p>
+                    The
+                    <a href="https://www.v1engineering.com/specifications/"
+                      >Mostly Printed CNC (MPCNC)</a
+                    >, a project that serves as a capstone to the passions that I
+                    have cultivated over the years. I discovered this project
+                    during the research process for my 3D printer.
+                  </p>
+                </div>
+              </button>
             </div>
 
             <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
-            >
+              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 hvr-grow-shadow"
+             >
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-file"></i></div>
                 <h4><a href="">Sed ut perspiciatis</a></h4>
@@ -356,8 +373,8 @@
             </div>
 
             <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0"
-            >
+              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0 hvr-grow-shadow"
+             >
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-tachometer"></i></div>
                 <h4><a href="">Magni Dolores</a></h4>
@@ -368,7 +385,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 hvr-grow-shadow">
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-world"></i></div>
                 <h4><a href="">Nemo Enim</a></h4>
@@ -379,7 +396,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 hvr-grow-shadow">
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-slideshow"></i></div>
                 <h4><a href="">Dele cardo</a></h4>
@@ -390,7 +407,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 hvr-grow-shadow">
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-arch"></i></div>
                 <h4><a href="">Divera don</a></h4>
@@ -402,7 +419,7 @@
             </div>
           </div>
         </div>
-        <div id="MPCNC" style="display: none;"></div>
+        <div id="MPCNC" style="display: none"></div>
       </div>
     </section>
     <!-- End Projects Section -->
