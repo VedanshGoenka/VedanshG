@@ -9,7 +9,7 @@ function toggle(visible) {
 $(function () {
   $("#hobbies-html").load("hobbies.html");
   $("#aboutme-html").load("aboutme.html");
-  $("#myContent").load("assets/projects/MPCNC/");
+  $("#MPCNC").load("assets/projects/MPCNC/");
   $("#astrophotography20-article").load("assets/blog/astrophotography2020/");
   $("#fiberopticcable-article").load("assets/blog/fiberopticinstall/");
   $("#astrophotography19-article").load("assets/blog/astrophotography2019/");
@@ -61,9 +61,9 @@ function showMoreLessAstro19() {
   );
 }
 
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  var y = document.getElementById("myContent");
+function showHide(divOne, divTwo) {
+  var x = idName(divOne);
+  var y = idName(divTwo);
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -74,26 +74,4 @@ function myFunction() {
   } else {
     y.style.display = "none";
   }
-  
-}
-
-
-function hideShow(toHide, toShow){
-  var hideID = idName(toHide);
-  var showID = idName(toShow);
-  if (hideID.style.display === "none") {
-    hideID.style.display = "block";
-  } else {
-    hideID.style.display = "none";
-  }
-
-  if (showID.style.display === "none") {
-    showID.style.display = "block";
-  } else {
-    showID.style.display = "none";
-  }
-}
-
-function showHide(hide, show) {
-  hideShow(idName(hide), idName(show));
 }
