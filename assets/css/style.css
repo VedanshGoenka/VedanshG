@@ -868,7 +868,6 @@ button {
   margin-bottom: 10px;
 }
 
-
 .projects code {
   all: unset;
   font-family: var(--bs-font-monospace);
