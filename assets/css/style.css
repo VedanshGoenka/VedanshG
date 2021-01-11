@@ -1353,6 +1353,10 @@ li {
 .credits a:hover {
   color: var(--white);
 }
+.credits div{
+  font-size: 1px;
+  opacity: 0;
+}
 
 /*--------------------------------------------------------------
 # Lightbox - Blog
