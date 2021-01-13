@@ -836,6 +836,8 @@ button {
   all: unset;
 }
 
+
+
 /*--------------------------------------------------------------
 # Projects - Content
 --------------------------------------------------------------*/
@@ -1353,7 +1355,7 @@ li {
 .credits a:hover {
   color: var(--white);
 }
-.credits div{
+.credits div {
   font-size: 1px;
   opacity: 0;
 }
