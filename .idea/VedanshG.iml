@@ -8,5 +8,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="venobox" level="application" />
+    <orderEntry type="library" name="jquery.isotope" level="application" />
+    <orderEntry type="library" name="OwlCarousel2" level="application" />
+    <orderEntry type="library" name="Counter-Up" level="application" />
+    <orderEntry type="library" name="waypoints" level="application" />
+    <orderEntry type="library" name="jquery-ui" level="application" />
+    <orderEntry type="library" name="jquery-3.5.1" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
   </component>
 </module>
