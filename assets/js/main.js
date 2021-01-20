@@ -9,11 +9,17 @@ function toggle(visible) {
 $(function () {
   $("#hobbies-html").load("hobbies.html");
   $("#aboutme-html").load("aboutme.html");
-  $("#MPCNC").load("assets/projects/MPCNC/");
-  $("#COVIDFS").load("assets/projects/CovidFS/");
-  $("#astrophotography20-article").load("assets/blog/astrophotography2020/");
-  $("#fiberopticcable-article").load("assets/blog/fiberopticinstall/");
-  $("#astrophotography19-article").load("assets/blog/astrophotography2019/");
+  $("#MPCNC").load("assets/projects/MPCNC/index.html");
+  $("#COVIDFS").load("assets/projects/CovidFS/index.html");
+  $("#astrophotography20-article").load(
+    "assets/blog/astrophotography2020/index.html"
+  );
+  $("#fiberopticcable-article").load(
+    "assets/blog/fiberopticinstall/index.html"
+  );
+  $("#astrophotography19-article").load(
+    "assets/blog/astrophotography2019/index.html"
+  );
   $("#contact-html").load("contact.html");
 });
 
