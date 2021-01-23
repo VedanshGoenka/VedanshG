@@ -793,6 +793,112 @@
                     src="assets/projects/MPCNC/mpcnc-removed-z-axis.jpg"
             />
         </a>
+        <h4>Day 7: 1/13</h4>
+        <p>
+            After 6 days of working on the mechanical portion of the CNC, it’s quite
+            relieving to be working on something else. I am a mechanical engineer by
+            experience and electronics is definitely not my strong suit, which is
+            precisely why I am really excited about wiring everything up. I believe
+            that I can make the electronics look really well integrated into the
+            overall CNC, hopefully by creating modifications to the design to
+            accommodate such changes.
+        </p>
+        <p>
+            I found some of the mounting hardware that I needed and was ready to start attaching the mounts for the
+            limit switches. These mounts need to
+            be attached to the wooden side panels, but on the inside. I sort of
+            forgot about this step while assembling the CNC which is why I had to
+            partially disassemble it. I also have to clamp the Y axis (the wooden
+            assembly) to the frame in an unusual way just to gain access to the
+            place where I want to put the limit switch.
+        </p>
+        <p>
+            I drilled out the mounting spot for the y limit switch, which I did in a
+            VERY jank way. I wasn’t able to get the precise hole location as the
+            large 3D printed pieces prevented my drill from even starting the hole.
+            I contemplated my choices. The only logical option that I could think of
+            was to print something like
+            <a
+                    href="https://www.thingiverse.com/thing:731086"
+                    target="_blank"
+            >this. This is a handheld manual drill</a
+            >
+            that while slow, may allow me to accurately drill the holes from the
+            inside rather than the outside.
+        </p>
+        <p>
+            I decided to YOLO it, but I did so with a strategy in mind. The hole
+            size that I needed was around 2mm. I had a bunch of ~1/2 mm bits— these
+            are the ones that break if you
+            <em>look </em>at them. I started off by
+            trying to visually place the holes, using calipers and ensuring
+            alignment from the x and y axis. After doing this I drilled the first
+            hole. This was pretty much bang on. With the location of the second hole
+            now clear I drilled the second hole. Then I put the piece and looked at
+            the alignment. There was a slight shift on one of them, so I simply
+            drilled another hole w/ the fragile bit and after a
+            <em>bit </em>of time I was finally able
+            to get the tiny holes roughly aligned. Then I took the larger bit and
+            made the holes bigger. This— admittedly convoluted— method worked much
+            better than I thought it would.
+        </p>
+        <p>
+            After finishing this step I started to plan the rest of my wiring. I
+            needed to understand where each of the wires go and to do this, I put
+            each wire in the roughly right spot. This way, I had a better idea of
+            where each wire goes. I spent about 30 min just deciding how I would run
+            the cables and after that I started putting the wires in their rough
+            locations. This is what the table looked like at this stage.
+        </p>
+        <a href="#MPCNC24">
+            <img
+                    alt="mpcnc-rough-wiring"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-rough-wiring.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC24">
+            <img
+                    alt="mpcnc-rough-wiring"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-rough-wiring.jpg"
+            />
+        </a>
+        <p>
+            After this I started to focus on the electronics. I went through half
+            the internet trying to find a wiring diagram for the motherboard, and
+            there really wasn’t a reliable one. I decided to read through the
+            manufacturers schematics and try to interpret where each of the jumpers
+            go. These jumpers are physical connections that I need to make on the
+            motherboard in order to ensure that all the electrical pathways are
+            solid. Once I was confident in what I had, I simply had to do the
+            electrical connections. After doing that, I put the stepper motor
+            drivers in their spots and put the heatsinks on the drivers. Here is an
+            image of the finished board.
+        </p>
+        <a href="#MPCNC25">
+            <img
+                    alt="mpcnc-motherboard-only"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-motherboard-only.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC25">
+            <img
+                    alt="mpcnc-motherboard-only"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-motherboard-only.jpg"
+            />
+        </a>
+        <p>
+            The next step was to start wiring everything up, and in order to do that
+            I decided that I should first solder all wires to the limit switches,
+            then mount the limit switches. I asked my neighbor of his soldering iron
+            and my anticipation grew.
+        </p>
+
         <h3 style="color: var(--light-grey)">More Coming Soon!</h3>
     </div>
 </article>
