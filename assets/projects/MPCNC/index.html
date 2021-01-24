@@ -804,8 +804,8 @@
             accommodate such changes.
         </p>
         <p>
-            I found some of the mounting hardware that I needed and was ready to start attaching the mounts for the
-            limit switches. These mounts need to
+            I found some of the mounting hardware that I needed and was ready to
+            start attaching the mounts for the limit switches. These mounts need to
             be attached to the wooden side panels, but on the inside. I sort of
             forgot about this step while assembling the CNC which is why I had to
             partially disassemble it. I also have to clamp the Y axis (the wooden
@@ -818,9 +818,7 @@
             large 3D printed pieces prevented my drill from even starting the hole.
             I contemplated my choices. The only logical option that I could think of
             was to print something like
-            <a
-                    href="https://www.thingiverse.com/thing:731086"
-                    target="_blank"
+            <a href="https://www.thingiverse.com/thing:731086" target="_blank"
             >this. This is a handheld manual drill</a
             >
             that while slow, may allow me to accurately drill the holes from the
@@ -830,17 +828,16 @@
             I decided to YOLO it, but I did so with a strategy in mind. The hole
             size that I needed was around 2mm. I had a bunch of ~1/2 mm bits— these
             are the ones that break if you
-            <em>look </em>at them. I started off by
-            trying to visually place the holes, using calipers and ensuring
-            alignment from the x and y axis. After doing this I drilled the first
-            hole. This was pretty much bang on. With the location of the second hole
-            now clear I drilled the second hole. Then I put the piece and looked at
-            the alignment. There was a slight shift on one of them, so I simply
-            drilled another hole w/ the fragile bit and after a
-            <em>bit </em>of time I was finally able
-            to get the tiny holes roughly aligned. Then I took the larger bit and
-            made the holes bigger. This— admittedly convoluted— method worked much
-            better than I thought it would.
+            <em>look </em>at them. I started off by trying to visually place the
+            holes, using calipers and ensuring alignment from the x and y axis.
+            After doing this I drilled the first hole. This was pretty much bang on.
+            With the location of the second hole now clear I drilled the second
+            hole. Then I put the piece and looked at the alignment. There was a
+            slight shift on one of them, so I simply drilled another hole w/ the
+            fragile bit and after a <em>bit </em>of time I was finally able to get
+            the tiny holes roughly aligned. Then I took the larger bit and made the
+            holes bigger. This— admittedly convoluted— method worked much better
+            than I thought it would.
         </p>
         <p>
             After finishing this step I started to plan the rest of my wiring. I
@@ -898,6 +895,260 @@
             then mount the limit switches. I asked my neighbor of his soldering iron
             and my anticipation grew.
         </p>
+
+        <h4>Day 8: 1/14-15</h4>
+        <p>Sheesh! Today was a productive day!</p>
+        <p>
+            In the morning I received all of the mounting hardware for the CNC that
+            I needed. This was 2 boxes of nuts and bolts needed for mounting many
+            miscellaneous things. The funny thing about the box I bought was the
+            pricing scheme. I really only needed a few M3, a few M2, and a couple of
+            nuts for each, instinctively I went to McMasterCarr to look for the nuts
+            and bolts that I needed. I realized that it would take a few days to get
+            here (closer to 5, and keep in mind this happened on the 11th or so) and
+            I felt as if the price was a little bit high, sure enough I was right. I
+            went onto Amazon and found these two boxes for about the same price, but
+            containing more than 10 times the variety and number of bolts— they were
+            a little bit weaker, but for this use case it really doesn’t matter.
+            (Yes I used photoshop to remove the label information, nice try)
+        </p>
+        <a href="#MPCNC26">
+            <img
+                    alt="mpcnc-bolt-package"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-bolt-package.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC26">
+            <img
+                    alt="mpcnc-bolt-package"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-bolt-package.jpg"
+            />
+        </a>
+        <p>
+            I borrowed the soldering iron from my cousin who lives next door— I
+            thought this was gonna be a piece of cake, boy how I was wrong. I’ve
+            used his soldering iron before, and since neither of us solder that
+            much, it's one of the cheapest soldering irons out there. As a result of
+            build up on the soldering iron tip, there was only one small spot which
+            contained enough heat to actually melt the solder. What made this much
+            harder is the fact that the soldering must be done on the CNC, as the
+            cables are looped through holes. If the soldering is not done on the
+            machine, it is impossible to put the cables through the cable management
+            holes. 
+        </p>
+        <p>
+            This led me to do one of the most crazy, but also comical things that I
+            have done on this project. While the soldering iron would be heating up,
+            I would be wiring the limit switches and somehow clamping it down (I
+            also didn’t have any clamps that were able to do the job 🤣). After that
+            was done, I would make sure everything was in order, dash to the
+            soldering iron, unplug it, then solder one hole. If I got lucky, I would
+            have enough heat for 2 holes. What made this even harder was that there
+            was only one tiny crevice where the soldering iron actually allowed the
+            solder to melt, everywhere else, the temperature wasn’t nearly high
+            enough. I spent the next few hours soldering 10 holes. 
+        </p>
+        <p>
+            What made this even better was the fact that I was soldering the WRONG
+            HOLES. Through what can only be described as a massive
+            <em>hole </em>in the documentation and an oversight on my part, it turns
+            out that I had wired the limit switch to be normally open. This means
+            that the switch will have current always flowing through it and when the
+            switch is pressed, the current flow will stop. This is not really the
+            best solution for the long run. I need to basically resolve each of the
+            limit switches— talk about a waste of time! 
+        </p>
+        <a href="#MPCNC27">
+            <img
+                    alt="mpcnc-incorrect-holes"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-incorrect-holes.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC27">
+            <img
+                    alt="mpcnc-incorrect-holes"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-incorrect-holes.jpg"
+            />
+        </a>
+        <p>
+            After spending another hour or so resoldering each of the holes, which
+            at this point felt agonizing because the soldering iron seemed to become
+            even less and less cooperative, I was finally finished. I then had to
+            screw the limit switches in. For 3 of the limit switches, I could simply
+            find a surface on the CNC, I used the back of the Z axis stepper motor,
+            to rest the pieces and comfortably tighten it up. The cables had slack
+            so I could easily pull a few inches. This only really worked for the X
+            and Z axis, which when done ended up looking like this. 
+        </p>
+        <p>
+            This is the Z axis switch, the cable goes to a hole in the aluminum
+            channel, allowing it to be very neatly organized. 
+        </p>
+        <a href="#MPCNC28">
+            <img
+                    alt="mpcnc-limitswitch-z"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-limitswitch-z.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC28">
+            <img
+                    alt="mpcnc-limitswitch-z"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-limitswitch-z.jpg"
+            />
+        </a>
+        <p>
+            This is the X-axis limit switch, the cable didn’t really have a logical
+            path to go through so I put it like this. Also this was the last switch
+            that I made, meaning that the soldering iron was basically toast; I used
+            blue tape, in lieu of electrical tape, to create a makeshift stress
+            relief. 
+        </p>
+        <a href="#MPCNC29">
+            <img
+                    alt="mpcnc-limitswitch-x"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-limitswitch-x.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC29">
+            <img
+                    alt="mpcnc-limitswitch-x"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-limitswitch-x.jpg"
+            />
+        </a>
+        <p>
+            The Y limit switches were another beast all together. These limit
+            switches were literally nestled underneath the entire carriage in a
+            space that is literally 1 and a half inches wide and has the belt going
+            through it. Putting the limit switches was a MASSIVE pain. Everytime I
+            put the screw in, I wouldn’t have the dexterity— to be fair very few
+            others would either— to get the allen key and hold. After that getting
+            the screw to go through the limit switch into the hole in the plastic
+            also took a lot of trial and error. And as a cherry on top, as soon as I
+            thought I was done with 2 of the holes, the limit switch literally fell
+            out, this was because the bolt that I was using didn’t go through the
+            entirety of the plastic. I had to swap from M2 - 10mm to M2- 12mm,
+            luckily I caught this with only one hole. After spending literally 75
+            min putting 4 screws in (that’s not an exaggeration), I was FINALLY done
+            with all of the limit switches. The only thing I hope is that now I
+            don’t fry them using the wrong plug (I have actually plugged it in
+            without power into the wrong plug, but that is purely due to how closely
+            the pins are.) Anyways, this is what the Y axis limit switches look
+            like— hopefully you can appreciate my plight. 
+        </p>
+        <a href="#MPCNC30">
+            <img
+                    alt="mpcnc-limitswitch-y"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-limitswitch-y.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC30">
+            <img
+                    alt="mpcnc-limitswitch-y"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-limitswitch-y.jpg"
+            />
+        </a>
+        <p>
+            After pretty much burning through the day attaching 5 limit switches, I
+            decided to try something different, I took a few “Glam Shots” of the CNC
+            at this stage. Here are a few of the images I took. 
+        </p>
+        <a href="#MPCNC31">
+            <img
+                    alt="glamImage"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-glam1.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC31">
+            <img
+                    alt="glamImage"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-glam1.jpg"
+            />
+        </a>
+        <br/>
+        <a href="#MPCNC32">
+            <img
+                    alt="glamImage"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-glam2.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC32">
+            <img
+                    alt="glamImage"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-glam2.jpg"
+            />
+        </a>
+        <br/>
+        <a href="#MPCNC33">
+            <img
+                    alt="glamImage"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-glam3.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC33">
+            <img
+                    alt="glamImage"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-glam3.jpg"
+            />
+        </a>
+        <br/>
+        <a href="#MPCNC34">
+            <img
+                    alt="glamImage"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-glam4.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC34">
+            <img
+                    alt="glamImage"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-glam4.jpg"
+            />
+        </a>
+        <br/>
+        <a href="#MPCNC35">
+            <img
+                    alt="glamImage"
+                    class="row col-8 col-sm-6 col-md-4 mx-auto"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-glam5.jpg"
+            />
+        </a>
+        <a class="lb" href="#_" id="MPCNC35">
+            <img
+                    alt="glamImage"
+                    loading="lazy"
+                    src="assets/projects/MPCNC/mpcnc-glam5.jpg"
+            />
+        </a>
+        <p>Time to work on testing and firmware! </p>
+        <h4>Day 9: 1/16-17</h4>
+        <p>TLDR; I fried the motherboard, full explanation coming soon &trade;</p>
 
         <h3 style="color: var(--light-grey)">More Coming Soon!</h3>
     </div>
