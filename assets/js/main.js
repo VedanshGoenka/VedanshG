@@ -5,6 +5,20 @@ function toggle(visible) {
   });
 }
 
+// Reduces the size of index.html
+$(function () {
+  $("#astrophotography20-article").load(
+    "assets/blog/astrophotography2020/index.html"
+  );
+  $("#fiberopticcable-article").load(
+    "assets/blog/fiberopticinstall/index.html"
+  );
+  $("#astrophotography19-article").load(
+    "assets/blog/astrophotography2019/index.html"
+  );
+  $("#contact-html").load("contact.html");
+});
+
 // Read More/Less Toggles
 
 //Creates the Read More/Less Button
