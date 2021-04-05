@@ -3,32 +3,32 @@
 --------------------------------------------------------------*/
 
 :root {
-    --color1: #4285f4;
-    --color1alt: #067ded;
-    --color2: #db4437;
-    --color3: #f4b400;
-    --color4: #0f9d58;
-    --color5: #18d26e;
-    --color6: #35e888;
-    --white: #fff;
-    --black: #000;
-    --light-grey: #aaaaaa;
-    --default-bg: #040404;
-    --default-text-color: #404040;
-    --alt-hint-of-transparency-black: rgba(0, 0, 0, 0.9);
-    --hint-of-transparency-black: rgba(0, 0, 0, 0.6);
-    --medium-transparency-grey: rgba(204, 204, 204, 0.1);
-    --hint-of-transparency-white: rgba(255, 255, 255, 0.6);
-    --light-transparency-white: rgba(255, 255, 255, 0.3);
-    --light-transparency-black: rgba(0, 0, 0, 0.3);
-    --medium-transparency-white: rgba(255, 255, 255, 0.12);
-    --heavy-transparency-white: rgba(255, 255, 255, 0.05);
+  --color1: #4285f4;
+  --color1alt: #067ded;
+  --color2: #db4437;
+  --color3: #f4b400;
+  --color4: #0f9d58;
+  --color5: #18d26e;
+  --color6: #35e888;
+  --white: #fff;
+  --black: #000;
+  --light-grey: #aaaaaa;
+  --default-bg: #040404;
+  --default-text-color: #404040;
+  --alt-hint-of-transparency-black: rgba(0, 0, 0, 0.9);
+  --hint-of-transparency-black: rgba(0, 0, 0, 0.6);
+  --medium-transparency-grey: rgba(204, 204, 204, 0.1);
+  --hint-of-transparency-white: rgba(255, 255, 255, 0.6);
+  --light-transparency-white: rgba(255, 255, 255, 0.3);
+  --light-transparency-black: rgba(0, 0, 0, 0.3);
+  --medium-transparency-white: rgba(255, 255, 255, 0.12);
+  --heavy-transparency-white: rgba(255, 255, 255, 0.05);
 }
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-main{
+main {
   background: var(--default-bg);
 }
 
@@ -44,7 +44,7 @@ a {
 }
 
 a:hover {
-  color: var(--color6);
+  color: var(--color5);
   text-decoration: none;
 }
 
@@ -71,7 +71,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: var(--color1);
+  background: var(--color5);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -80,13 +80,17 @@ h6 {
 
 .back-to-top i {
   font-size: 28px;
-  color: #fff;
+  color: var(--black);
   line-height: 0;
 }
 
 .back-to-top:hover {
-  background: var(--color1alt);
-  color: #fff;
+  background: var(--color4);
+  color: var(--white);
+}
+
+.back-to-top:hover > i {
+  color: var(--white);
 }
 
 .back-to-top.active {
@@ -233,27 +237,27 @@ h6 {
   }
   .nav-menu a span {
     display: none;
-    color: #fff;
+    color: var(--white);
   }
 }
 
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu li:hover > a {
-  color: #fff;
-  background: #0563bb;
+  color: var(--white);
+  background: var(--color4);
 }
 
 .nav-menu a:hover span,
 .nav-menu .active span,
 .nav-menu li:hover > a span {
-  color: #fff;
+  color: var(--white);
 }
 
 .nav-menu a:hover,
 .nav-menu li:hover > a {
   width: 100%;
-  color: #fff;
+  color: var(--white);
 }
 
 .nav-menu a:hover span,
@@ -266,12 +270,12 @@ h6 {
 */
 .mobile-nav-toggle {
   position: fixed;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 20px;
   z-index: 9998;
   border: 0;
   background: none;
-  font-size: 28px;
+  font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
   line-height: 0;
@@ -281,7 +285,7 @@ h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #45505b;
+  color: var(--white);
 }
 
 .mobile-nav-active {
@@ -293,8 +297,8 @@ h6 {
 }
 
 .mobile-nav-active .mobile-nav-toggle {
-  color: #fff;
-  background-color: #0563bb;
+  color: var(--white);
+  background-color: var(--color5);
 }
 
 /*--------------------------------------------------------------
@@ -303,14 +307,47 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/bg3.jpg") top right no-repeat;
-  background-size: cover;
   position: relative;
+}
+
+@media (min-width: 301px) and (max-width: 992px) {
+  #hero .contrast-box {
+    border-radius: 25px;
+    background: var(--hint-of-transparency-black);
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+  }
 }
 
 @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
+  }
+}
+
+@media (max-width: 300px) {
+  #hero {
+    background: url("../img/bg1.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+@media (min-width: 301px) and (max-width: 992px) {
+  #hero {
+    background: url("../img/bg5.jpg") top right no-repeat;
+    background-size: cover;
+  }
+}
+@media (min-width: 993px) and (max-width: 1268px) {
+  #hero {
+    background: url("../img/bg4.jpg") center left no-repeat;
+    background-size: cover;
+  }
+}
+@media (min-width: 1269px) {
+  #hero {
+    background: url("../img/bg3.jpg") top right no-repeat;
+    background-size: cover;
   }
 }
 
@@ -340,7 +377,7 @@ h6 {
 }
 
 #hero p span {
-  color: var(--color6);
+  color: var(--color5);
   letter-spacing: 1px;
 }
 
@@ -358,7 +395,7 @@ h6 {
 }
 
 #hero .social-links a:hover {
-  color: var(--color6);
+  color: var(--color5);
 }
 
 @media (max-width: 992px) {
@@ -396,7 +433,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: var(--color6);
+  color: var(--color5);
 }
 
 .section-title h2::before {
@@ -416,7 +453,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: var(--color6);
+  background: var(--color5);
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -461,41 +498,41 @@ section {
 }
 
 .about .content h3 span {
-    font-weight: 700;
-    font-size: 26px;
-    color: var(--color5);
-    border-bottom: 2px solid var(--color2);
-    padding-bottom: 6px;
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--color5);
+  border-bottom: 2px solid var(--color2);
+  padding-bottom: 6px;
 }
 
 .about .content h3 span1 {
-    font-weight: 700;
-    font-size: 26px;
-    color: var(--color5);
-    border-bottom: 2px solid var(--color1);
-    padding-bottom: 6px;
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--color5);
+  border-bottom: 2px solid var(--color1);
+  padding-bottom: 6px;
 }
 
 .about .content h3 span2 {
-    font-weight: 700;
-    font-size: 26px;
-    color: var(--color5);
-    border-bottom: 2px solid var(--color3);
-    padding-bottom: 6px;
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--color5);
+  border-bottom: 2px solid var(--color3);
+  padding-bottom: 6px;
 }
 
 .about .content p.subtitle {
-    color: var(--light-grey);
-    font-style: italic;
-    font-weight: bold;
+  color: var(--light-grey);
+  font-style: italic;
+  font-weight: bold;
 }
 
 .about .content p.info {
-    color: var(--white);
+  color: var(--white);
 }
 
 .about .content p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -503,46 +540,45 @@ section {
 --------------------------------------------------------------*/
 
 .skill_experience h2 {
-    font-size: 14px;
-    font-weight: 500;
-    padding: 0;
-    line-height: 1px;
-    margin: 0 0 20px 0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--light-grey);
-    font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--light-grey);
+  font-family: "Poppins", sans-serif;
 }
 
 .skill_experience divider {
-    content: "";
-    width: 20px;
-    height: 1px;
-    display: inline-block;
-    background: var(--color1);
-    margin: 4px 4px;
+  content: "";
+  width: 20px;
+  height: 1px;
+  display: inline-block;
+  background: var(--color1);
+  margin: 4px 4px;
 }
 
 .skill_experience h2 expert {
-    color: var(--color2);
+  color: var(--color2);
 }
 
 .skill_experience h2 advanced {
-    color: var(--color1);
+  color: var(--color1);
 }
 
 .skill_experience h2 intermediate {
-    color: var(--color3);
+  color: var(--color3);
 }
 
 .skill_experience h2 learning {
-    color: var(--color4);
+  color: var(--color4);
 }
 
 .skill_experience h2 years {
-    color: var(--white);
+  color: var(--white);
 }
-
 
 .skills .progress {
   height: 60px;
@@ -563,33 +599,33 @@ section {
 }
 
 .skills .progress .skill small {
-    font-size: 0.75rem;
-    font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
 .skills .progress .skill expert {
-    color: var(--color2);
+  color: var(--color2);
 }
 
 .skills .progress .skill advanced {
-    color: var(--color1);
+  color: var(--color1);
 }
 
 .skills .progress .skill intermediate {
-    color: var(--color3);
+  color: var(--color3);
 }
 
 .skills .progress .skill learning {
-    color: var(--color4);
+  color: var(--color4);
 }
 
 .skills .progress .skill lifetime {
-    color: var(--light-grey);
+  color: var(--light-grey);
 }
 
 .skills .progress .skill .val {
   float: right;
-    font-size: 0.8125rem;
+  font-size: 0.8125rem;
   font-style: normal;
 }
 
@@ -598,42 +634,41 @@ section {
 }
 
 .skills .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: 0.9s;
-    background-color: var(--color5);
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: var(--color5);
 }
-
 
 /*--------------------------------------------------------------
 # Hobbies/Interests
 --------------------------------------------------------------*/
 
 .hobbies .icon-box {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background: var(--heavy-transparency-white);
-    transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: var(--heavy-transparency-white);
+  transition: ease-in-out 0.3s;
 }
 
 .hobbies .icon-box i {
-    font-size: 32px;
-    padding-right: 10px;
-    line-height: 1;
+  font-size: 32px;
+  padding-right: 10px;
+  line-height: 1;
 }
 
 .hobbies .icon-box h3 {
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-size: 16px;
-    color: var(--white);
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 16px;
+  color: var(--white);
 }
 
 .hobbies .icon-box:hover {
-    background: var(--medium-transparency-white);
+  background: var(--medium-transparency-white);
 }
 
 /*--------------------------------------------------------------
@@ -677,7 +712,7 @@ section {
 .blog .blog-item p,
 ul,
 li {
-    color: var(--light-grey);
+  color: var(--light-grey);
 }
 
 .blog .blog-item ul {
@@ -692,47 +727,46 @@ li {
   padding-bottom: 0;
 }
 
-.blog .lb{
+.blog .lb {
   display: none;
 }
 
 .vbox-content {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .vbox-content img {
-    max-width: 100%;
-    height: 100%;
+  max-width: 100%;
+  height: 100%;
 }
 
 #more-astro20 {
-    display: none;
+  display: none;
 }
 
 #more-fiber {
-    display: none;
+  display: none;
 }
 
 #more-astro19 {
-    display: none;
+  display: none;
 }
 
 .blog .button {
-    font-family: "Poppins", "Open Sans";
-    color: var(--color5);
-    display: inline-block;
-    cursor: pointer;
-    background-color: var(--default-bg);
-    font: 400 13.3333px Arial;
-    padding: 4px 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--light-grey);
-    border-image: initial;
-    border-radius: 6px;
+  font-family: "Poppins", "Open Sans";
+  color: var(--color5);
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--default-bg);
+  font: 400 13.3333px Arial;
+  padding: 4px 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--light-grey);
+  border-image: initial;
+  border-radius: 6px;
 }
-
 
 /*--------------------------------------------------------------
 # Projects
@@ -757,8 +791,6 @@ li {
   border-radius: 5px;
   margin-bottom: 20px;
 }
-
-
 
 .projects .icon-box .icon i {
   color: var(--white);
@@ -803,26 +835,26 @@ li {
 .projects .icon-box:hover h4 a,
 .projects .icon-box:hover h4 button,
 .projects .icon-box:hover p {
-    color: var(--white);
+  color: var(--white);
 }
 
 h4 button {
-    all: unset;
-    display: inline;
+  all: unset;
+  display: inline;
 }
 
 h2 button {
-    all: unset;
-    display: inline;
-    margin: 0 0 0 0;
+  all: unset;
+  display: inline;
+  margin: 0 0 0 0;
 }
 
 button {
-    all: unset;
+  all: unset;
 }
 
 .half-width {
-    width: 47.5%;
+  width: 47.5%;
 }
 
 /*--------------------------------------------------------------
@@ -837,7 +869,7 @@ button {
   margin: 0 auto 25px auto;
   list-style: none;
   text-align: center;
-  background: #fff;
+  background: var(--white);
   border-radius: 50px;
   padding: 2px 15px;
 }
@@ -857,7 +889,7 @@ button {
 
 .photography #photography-flters li:hover,
 .photography #photography-flters li.filter-active {
-  color: #0563bb;
+  color: var(--color4);
 }
 
 .photography #photography-flters li:last-child {
@@ -1004,16 +1036,16 @@ button {
   .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: var(--white);
   opacity: 1;
-  border: 1px solid #0563bb;
+  border: 1px solid var(--color5);
 }
 
 .photography-details
   .photography-details-slider
   .swiper-pagination
   .swiper-pagination-bullet-active {
-  background-color: #0563bb;
+  background-color: var(--color5);
 }
 
 .photography-details .photography-info {
@@ -1053,7 +1085,6 @@ button {
   padding: 0;
 }
 
-
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
@@ -1068,7 +1099,7 @@ button {
 .testimonials .testimonial-item .testimonial-img {
   width: 120px;
   border-radius: 50%;
-  border: 4px solid #fff;
+  border: 4px solid var(--white);
   margin: 0 auto;
 }
 
@@ -1117,13 +1148,13 @@ button {
 .testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: var(--white);
   opacity: 1;
-  border: 1px solid #0563bb;
+  border: 1px solid var(--color5);
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #0563bb;
+  background-color: var(--color5);
 }
 
 @media (min-width: 992px) {
@@ -1137,12 +1168,12 @@ button {
 --------------------------------------------------------------*/
 .contact .info {
   width: 100%;
-  background: #fff;
+  background: var(--white);
 }
 
 .contact .info i {
   font-size: 20px;
-  color: #0563bb;
+  color: var(--color5);
   float: left;
   width: 44px;
   height: 44px;
@@ -1177,13 +1208,13 @@ button {
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #0563bb;
-  color: #fff;
+  background: var(--color5);
+  color: var(--white);
 }
 
 .contact .php-email-form {
   width: 100%;
-  background: #fff;
+  background: var(--white);
 }
 
 .contact .php-email-form .form-group {
@@ -1192,7 +1223,7 @@ button {
 
 .contact .php-email-form .error-message {
   display: none;
-  color: #fff;
+  color: var(--white);
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
@@ -1205,7 +1236,7 @@ button {
 
 .contact .php-email-form .sent-message {
   display: none;
-  color: #fff;
+  color: var(--white);
   background: #18d26e;
   text-align: center;
   padding: 15px;
@@ -1214,7 +1245,7 @@ button {
 
 .contact .php-email-form .loading {
   display: none;
-  background: #fff;
+  background: var(--white);
   text-align: center;
   padding: 15px;
 }
@@ -1248,10 +1279,10 @@ button {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #0563bb;
+  background: var(--color5);
   border: 0;
   padding: 10px 35px;
-  color: #fff;
+  color: var(--white);
   transition: 0.4s;
   border-radius: 50px;
 }
@@ -1312,8 +1343,8 @@ button {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #0563bb;
-  color: #fff;
+  background: var(--color5);
+  color: var(--white);
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1326,7 +1357,7 @@ button {
 
 #footer .social-links a:hover {
   background: #0678e3;
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -1367,35 +1398,35 @@ button {
 --------------------------------------------------------------*/
 
 .credits {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    padding: 15px;
-    text-align: end;
-    font-size: 13px;
-    color: var(--white);
-    z-index: 999999;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+  text-align: end;
+  font-size: 13px;
+  color: var(--white);
+  z-index: 999999;
 }
 
 @media (max-width: 992px) {
-    .credits {
-        text-align: center;
-        padding: 10px;
-        background: var(--hint-of-transparency-black);
-    }
+  .credits {
+    text-align: center;
+    padding: 10px;
+    background: var(--hint-of-transparency-black);
+  }
 }
 
 .credits a {
-    color: var(--color5);
-    transition: 0.3s;
+  color: var(--color5);
+  transition: 0.3s;
 }
 
 .credits a:hover {
-    color: var(--white);
+  color: var(--white);
 }
 
 .credits div {
-    font-size: 1px;
-    opacity: 0;
+  font-size: 1px;
+  opacity: 0;
 }
