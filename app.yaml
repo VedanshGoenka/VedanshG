@@ -1,0 +1,21 @@
+runtime: python38
+instance_class: F2
+service: default
+
+handlers:
+
+  - url: /
+    static_files: index.html
+    upload: index.html
+
+  - url: /(.*\.html)$
+    static_files: \1
+    upload: .*\.html
+
+  - url: /assets/
+    static_dir: assets
+    secure: always
+
+  - url: /.*
+    script: auto
+    secure: always
