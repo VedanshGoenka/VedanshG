@@ -3,43 +3,48 @@
 --------------------------------------------------------------*/
 
 :root {
-  --color1: #0563bb;
-  --color1alt: #067ded;
-  --color2: #db4437;
-  --color3: #f4b400;
-  --color4: #0f9d58;
-  --color5: #18d26e;
-  --text: #292827;
-  --white: #fff;
-  --black: #000;
-  --light-grey: #aaaaaa;
-  --default-bg: #040404;
-  --default-text-color: #404040;
-  --alt-hint-of-transparency-black: rgba(0, 0, 0, 0.9);
-  --hint-of-transparency-black: rgba(0, 0, 0, 0.6);
-  --medium-transparency-grey: rgba(204, 204, 204, 0.1);
-  --hint-of-transparency-white: rgba(255, 255, 255, 0.6);
-  --light-transparency-white: rgba(255, 255, 255, 0.3);
-  --light-transparency-black: rgba(0, 0, 0, 0.3);
-  --medium-transparency-white: rgba(255, 255, 255, 0.12);
-  --heavy-transparency-white: rgba(255, 255, 255, 0.05);
+    --color1: #4285f4;
+    --color1alt: #067ded;
+    --color2: #db4437;
+    --color3: #f4b400;
+    --color4: #0f9d58;
+    --color5: #18d26e;
+    --color6: #35e888;
+    --white: #fff;
+    --black: #000;
+    --light-grey: #aaaaaa;
+    --default-bg: #040404;
+    --default-text-color: #404040;
+    --alt-hint-of-transparency-black: rgba(0, 0, 0, 0.9);
+    --hint-of-transparency-black: rgba(0, 0, 0, 0.6);
+    --medium-transparency-grey: rgba(204, 204, 204, 0.1);
+    --hint-of-transparency-white: rgba(255, 255, 255, 0.6);
+    --light-transparency-white: rgba(255, 255, 255, 0.3);
+    --light-transparency-black: rgba(0, 0, 0, 0.3);
+    --medium-transparency-white: rgba(255, 255, 255, 0.12);
+    --heavy-transparency-white: rgba(255, 255, 255, 0.05);
 }
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+main{
+  background: var(--default-bg);
+}
+
 body {
   font-family: "Open Sans", sans-serif;
-  color: var(--text);
+  color: var(--white);
+  background: var(--black);
 }
 
 a {
-  color: var(--color1);
+  color: var(--color5);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--color1alt);
+  color: var(--color6);
   text-decoration: none;
 }
 
@@ -66,7 +71,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #0563bb;
+  background: var(--color1);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -80,7 +85,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #0678e3;
+  background: var(--color1alt);
   color: #fff;
 }
 
@@ -108,9 +113,9 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #0563bb;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border: 6px solid var(--color1);
+  border-top-color: var(--black);
+  border-bottom-color: var(--black);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -157,13 +162,14 @@ h6 {
   transition: all 0.5s;
   padding: 15px;
   overflow-y: auto;
+  background: var(--black);
 }
 
 @media (max-width: 992px) {
   #header {
     width: 300px;
-    background: #fff;
-    border-right: 1px solid #e6e9ec;
+    background: var(--black);
+    border-right: 1px solid var(--black);
     left: -300px;
   }
 }
@@ -205,7 +211,7 @@ h6 {
   transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
-  background: #f2f3f5;
+  background: --white;
   height: 56px;
   width: 100%;
   overflow: hidden;
@@ -297,7 +303,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top right no-repeat;
+  background: url("../img/bg3.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -310,7 +316,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--heavy-transparency-white);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -323,18 +329,18 @@ h6 {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: #45505b;
+  color: var(--white);
 }
 
 #hero p {
-  color: #45505b;
+  color: var(--white);
   margin: 15px 0 0 0;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
-  color: #0563bb;
+  color: var(--color6);
   letter-spacing: 1px;
 }
 
@@ -345,14 +351,14 @@ h6 {
 #hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: #45505b;
+  color: var(--white);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
 }
 
 #hero .social-links a:hover {
-  color: #0563bb;
+  color: var(--color6);
 }
 
 @media (max-width: 992px) {
@@ -390,7 +396,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #45505b;
+  color: var(--color6);
 }
 
 .section-title h2::before {
@@ -399,7 +405,7 @@ section {
   display: block;
   width: 120px;
   height: 1px;
-  background: #ddd;
+  background: var(--white);
   bottom: 1px;
   left: calc(50% - 60px);
 }
@@ -410,7 +416,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #0563bb;
+  background: var(--color6);
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -425,7 +431,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #728394;
+  color: var(--white);
 }
 
 .about .content ul {
@@ -446,7 +452,7 @@ section {
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #0563bb;
+  color: var(--white);
   line-height: 0;
 }
 
@@ -454,51 +460,90 @@ section {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Facts
---------------------------------------------------------------*/
-.facts .count-box {
-  padding: 30px 30px 25px 30px;
-  margin-top: 30px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  background: #fff;
+.about .content h3 span {
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--color5);
+    border-bottom: 2px solid var(--color2);
+    padding-bottom: 6px;
 }
 
-.facts .count-box i {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  background: #0563bb;
-  color: #fff;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
+.about .content h3 span1 {
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--color5);
+    border-bottom: 2px solid var(--color1);
+    padding-bottom: 6px;
 }
 
-.facts .count-box span {
-  font-size: 36px;
-  display: block;
-  font-weight: 600;
-  color: #011426;
+.about .content h3 span2 {
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--color5);
+    border-bottom: 2px solid var(--color3);
+    padding-bottom: 6px;
 }
 
-.facts .count-box p {
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
+.about .content p.subtitle {
+    color: var(--light-grey);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.about .content p.info {
+    color: var(--white);
+}
+
+.about .content p:last-child {
+    margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
+
+.skill_experience h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 20px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--light-grey);
+    font-family: "Poppins", sans-serif;
+}
+
+.skill_experience divider {
+    content: "";
+    width: 20px;
+    height: 1px;
+    display: inline-block;
+    background: var(--color1);
+    margin: 4px 4px;
+}
+
+.skill_experience h2 expert {
+    color: var(--color2);
+}
+
+.skill_experience h2 advanced {
+    color: var(--color1);
+}
+
+.skill_experience h2 intermediate {
+    color: var(--color3);
+}
+
+.skill_experience h2 learning {
+    color: var(--color4);
+}
+
+.skill_experience h2 years {
+    color: var(--white);
+}
+
+
 .skills .progress {
   height: 60px;
   display: block;
@@ -513,23 +558,82 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #45505b;
+  color: var(--white);
+  font-size: 0.875rem;
+}
+
+.skills .progress .skill small {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.skills .progress .skill expert {
+    color: var(--color2);
+}
+
+.skills .progress .skill advanced {
+    color: var(--color1);
+}
+
+.skills .progress .skill intermediate {
+    color: var(--color3);
+}
+
+.skills .progress .skill learning {
+    color: var(--color4);
+}
+
+.skills .progress .skill lifetime {
+    color: var(--light-grey);
 }
 
 .skills .progress .skill .val {
   float: right;
+    font-size: 0.8125rem;
   font-style: normal;
 }
 
 .skills .progress-bar-wrap {
-  background: #f2f3f5;
+  background: var(--medium-transparency-white);
 }
 
 .skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #0563bb;
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: var(--color5);
+}
+
+
+/*--------------------------------------------------------------
+# Hobbies/Interests
+--------------------------------------------------------------*/
+
+.hobbies .icon-box {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: var(--heavy-transparency-white);
+    transition: ease-in-out 0.3s;
+}
+
+.hobbies .icon-box i {
+    font-size: 32px;
+    padding-right: 10px;
+    line-height: 1;
+}
+
+.hobbies .icon-box h3 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: var(--white);
+}
+
+.hobbies .icon-box:hover {
+    background: var(--medium-transparency-white);
 }
 
 /*--------------------------------------------------------------
@@ -591,6 +695,139 @@ section {
   top: 0;
   background: #fff;
   border: 2px solid #0563bb;
+}
+
+
+/*--------------------------------------------------------------
+# Projects
+--------------------------------------------------------------*/
+.projects .icon-box {
+  text-align: center;
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+  background: var(--medium-transparency-grey);
+}
+
+.projects .icon-box .icon {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+  position: relative;
+}
+
+.projects .icon-box .icon i {
+  font-size: 36px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.projects .icon-box .icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.projects .icon-box .icon svg path {
+  transition: 0.5s;
+  fill: #f5f5f5;
+}
+
+.projects .icon-box h4 {
+  font-weight: 600;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+}
+
+.projects .icon-box h4 a {
+  color: #45505b;
+  transition: ease-in-out 0.3s;
+}
+
+.projects .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.projects .icon-box:hover {
+  border-color: #fff;
+  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+}
+
+.projects .iconbox-blue i {
+  color: #47aeff;
+}
+
+.projects .iconbox-blue:hover .icon i {
+  color: #fff;
+}
+
+.projects .iconbox-blue:hover .icon path {
+  fill: #47aeff;
+}
+
+.projects .iconbox-orange i {
+  color: #ffa76e;
+}
+
+.projects .iconbox-orange:hover .icon i {
+  color: #fff;
+}
+
+.projects .iconbox-orange:hover .icon path {
+  fill: #ffa76e;
+}
+
+.projects .iconbox-pink i {
+  color: #e80368;
+}
+
+.projects .iconbox-pink:hover .icon i {
+  color: #fff;
+}
+
+.projects .iconbox-pink:hover .icon path {
+  fill: #e80368;
+}
+
+.projects .iconbox-yellow i {
+  color: #ffbb2c;
+}
+
+.projects .iconbox-yellow:hover .icon i {
+  color: #fff;
+}
+
+.projects .iconbox-yellow:hover .icon path {
+  fill: #ffbb2c;
+}
+
+.projects .iconbox-red i {
+  color: #ff5828;
+}
+
+.projects .iconbox-red:hover .icon i {
+  color: #fff;
+}
+
+.projects .iconbox-red:hover .icon path {
+  fill: #ff5828;
+}
+
+.projects .iconbox-teal i {
+  color: #11dbcf;
+}
+
+.projects .iconbox-teal:hover .icon i {
+  color: #fff;
+}
+
+.projects .iconbox-teal:hover .icon path {
+  fill: #11dbcf;
 }
 
 /*--------------------------------------------------------------
@@ -821,138 +1058,6 @@ section {
   padding: 0;
 }
 
-/*--------------------------------------------------------------
-# Projects
---------------------------------------------------------------*/
-.projects .icon-box {
-  text-align: center;
-  padding: 70px 20px 80px 20px;
-  transition: all ease-in-out 0.3s;
-  background: #fff;
-  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
-}
-
-.projects .icon-box .icon {
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: ease-in-out 0.3s;
-  position: relative;
-}
-
-.projects .icon-box .icon i {
-  font-size: 36px;
-  transition: 0.5s;
-  position: relative;
-}
-
-.projects .icon-box .icon svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.projects .icon-box .icon svg path {
-  transition: 0.5s;
-  fill: #f5f5f5;
-}
-
-.projects .icon-box h4 {
-  font-weight: 600;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
-}
-
-.projects .icon-box h4 a {
-  color: #45505b;
-  transition: ease-in-out 0.3s;
-}
-
-.projects .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.projects .icon-box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
-}
-
-.projects .iconbox-blue i {
-  color: #47aeff;
-}
-
-.projects .iconbox-blue:hover .icon i {
-  color: #fff;
-}
-
-.projects .iconbox-blue:hover .icon path {
-  fill: #47aeff;
-}
-
-.projects .iconbox-orange i {
-  color: #ffa76e;
-}
-
-.projects .iconbox-orange:hover .icon i {
-  color: #fff;
-}
-
-.projects .iconbox-orange:hover .icon path {
-  fill: #ffa76e;
-}
-
-.projects .iconbox-pink i {
-  color: #e80368;
-}
-
-.projects .iconbox-pink:hover .icon i {
-  color: #fff;
-}
-
-.projects .iconbox-pink:hover .icon path {
-  fill: #e80368;
-}
-
-.projects .iconbox-yellow i {
-  color: #ffbb2c;
-}
-
-.projects .iconbox-yellow:hover .icon i {
-  color: #fff;
-}
-
-.projects .iconbox-yellow:hover .icon path {
-  fill: #ffbb2c;
-}
-
-.projects .iconbox-red i {
-  color: #ff5828;
-}
-
-.projects .iconbox-red:hover .icon i {
-  color: #fff;
-}
-
-.projects .iconbox-red:hover .icon path {
-  fill: #ff5828;
-}
-
-.projects .iconbox-teal i {
-  color: #11dbcf;
-}
-
-.projects .iconbox-teal:hover .icon i {
-  color: #fff;
-}
-
-.projects .iconbox-teal:hover .icon path {
-  fill: #11dbcf;
-}
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1261,3 +1366,4 @@ section {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
