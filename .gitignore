@@ -1,2 +1,8 @@
 .idea
 .vscode
+
+# Temp for GIT LFS QUOTA
+assets/**/*.jpg
+assets/**/*.JPG
+assets/**/*.png
+assets/**/*.jpeg
