@@ -773,9 +773,28 @@ li {
 --------------------------------------------------------------*/
 .projects .icon-box {
   text-align: center;
-  padding: 80px 20px;
+  padding: 80px 20px 20px;
   transition: all ease-in-out 0.3s;
   background: var(--default-bg);
+  box-shadow: 12px 10px 0 #151515,
+              -12px 10px 0 0 #151515;
+}
+
+[class*="col-"] {
+    background-clip: padding-box;
+    border: 15px solid transparent;
+}
+
+.projects .icon-box img{
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px ;
 }
 
 .projects .icon-box .icon {
@@ -786,10 +805,13 @@ li {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-out 0s;
-  position: relative;
+  position: sticky;
   transform-style: preserve-3d;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  z-index: 999;
+
 }
 
 .projects .icon-box .icon i {
@@ -797,12 +819,14 @@ li {
   font-size: 28px;
   transition: 0.5s;
   position: relative;
+  display: none;
 }
 
 .projects .icon-box .icon svg {
   position: relative;
   top: 0;
   left: 0;
+  display: none;
 }
 
 .projects .icon-box .icon svg path {
@@ -830,6 +854,7 @@ li {
 .projects .icon-box:hover {
   border-color: rgb(0, 0, 0);
   box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+  
 }
 
 .projects .icon-box:hover h4 a,
@@ -1391,6 +1416,7 @@ button {
   box-shadow: 0 10px 10px -10px var(--color5);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  z-index: 9999;
 }
 
 /*--------------------------------------------------------------
