@@ -138,7 +138,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: var(--color5);
+  background: var(--white);
   bottom: 0;
   left: calc(50% - 20px);
 }
