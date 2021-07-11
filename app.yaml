@@ -7,11 +7,13 @@ handlers:
   - url: /
     static_files: index.html
     upload: index.html
+    secure: always
 
   - url: /(.*\.html)$
     static_files: \1
     upload: .*\.html
-
+    secure: always
+    
   - url: /assets/
     static_dir: assets
     secure: always

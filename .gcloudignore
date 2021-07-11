@@ -5,3 +5,4 @@ __pycache__/
 .idea
 .vscode
 *.mp4
+.netlify
