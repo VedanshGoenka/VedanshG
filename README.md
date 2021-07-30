@@ -2,4 +2,6 @@
 
 Personal Website built on the Bootstrap Framework with minimal js.
 
-Currently a WIP - Github Pages are a dunce.
+Currently hosted @ https://vedansh.vgoenka.com/
+
+Updated semi-frequently
